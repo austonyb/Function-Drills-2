@@ -209,8 +209,15 @@ var users = [
 
 // CODE HERE 
 
-const getUserById =  (arr, id, cb) = {
-  
+function getUserById(arrOfObjs, id, callback) {
+  let matchingUser = null
+  for (let i = 0; i < arrOfObjs.length; i++) {
+    if (arrOfObjs[i].id === id) {
+      matchingUser = arrOfObjs[i]
+    }
+  }
+
+  callback(matchingUser)
 }
 
 
@@ -218,9 +225,9 @@ const getUserById =  (arr, id, cb) = {
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
 
 ////////// CHALLENGE //////////
 
