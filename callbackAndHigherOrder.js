@@ -157,16 +157,12 @@ uniq(names, (uniqArr) => {
 // CODE HERE 
 
 const each = (arr, cb) => {
-  for(let i = 0; i < arr.length; i++) {
-    cb(arr[i], i);
-  }
+  return arr.forEach((e, i) => {
+    cb(e, i)
+  })
 }
 
-const names2 = ["cam", "auston", "beans", "beef"];
 
-each(names2, ('cam', 0) => {
-  console.log(`The item at index ${arr} is ${cb}`)
-})
 /*
   Invoke the each function, passing in the names array and a callback function.
   The callback function should take in two parameters, item and index.
@@ -176,6 +172,9 @@ each(names2, ('cam', 0) => {
 
 // CODE HERE
 
+each(names, (e, i) => {
+  console.log(`The item at index ${i} is ${e}`)
+})
 
 
 ////////// PROBLEM 7 //////////
@@ -210,7 +209,9 @@ var users = [
 
 // CODE HERE 
 
-
+const getUserById =  (arr, id, cb) = {
+  
+}
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
